@@ -1,0 +1,103 @@
+name: GodCraft
+version: 1.6
+author: TheHarrisonCrafter
+main: net.theharrisoncrafter.God
+website: http://dev.bukkit.org/server-mods/god-craft/
+commands:
+  boom:
+    description: Creates an explosion around a player.
+    usage: /boom <username> [power]
+  burn:
+    description: Sets a player on fire.
+    usage: /burn <username>
+  getcrafting:
+    description: Shows a crafting window.
+    usage: /getcrafting
+  getenchanting:
+    description: Shows an enchanting window.
+    usage: /getenchanting
+  getenderchest:
+    description: Shows a players enderchest.
+    usage: /getenderchest <username>
+  getinventory:
+    description: Shows a players inventory.
+    usage: /getinventory <username>
+  heal:
+    description: Gives player full health.
+    usage: /heal <username>
+  lightning:
+    description: Shoots a bolt of lightning on the block that the players croshair is pointing at.
+    usage: /lightning [damage 1 or 0]
+  murder:
+    description: Kills a player without warning.
+    usage: /murder <username>
+  nickname:
+    description: Change players chat and list name.
+    usage: /nickname [username] <newname>
+    alius: nick
+  ping:
+    description: This is a Ping utility.
+    usage: /ping
+  throw:
+    description: Make a player throw a snowball, egg, or arrow.
+    usage: /throw [username] <egg,snowball,arrow>
+  troll:
+    description: Troll a player.
+    usage: /troll <username>
+
+permissions:
+    GodCraft.*:
+        description: Gives all God Craft command permissions.
+        children:
+            GodCraft.Boom: true
+            GodCfart.Burn: true
+            GodCfart.Getcrafting: true
+            GodCfart.Getenchanting: true
+            GodCfart.Getenderchest: true
+            GodCfart.Getinventory: true
+            GodCfart.Heal: true
+            GodCfart.Lighting: true
+            GodCfart.Murder: true
+            GodCfart.Nickname: true
+            GodCfart.Ping: true
+            GodCfart.Throw: true
+            GodCfart.Troll: true
+    GodCraft.Boom:
+        description: Allows user to use boom command.
+        default: op
+    GodCraft.Burn:
+        description: Allows user to use burn command.
+        default: op
+    GodCraft.Getcrafting:
+        descriptin: Allows user to use getcrafting command.
+        default: op
+    GodCraft.Getenchanting:
+        description: Allows user to use getenchanting command.
+        defauld: op
+    GodCraft.Getenderchest:
+        description: Allows user to use getenderchest command.
+        default: op
+    GodCraft.Getinventory:
+        description: Allows user to use getinventory command.
+        default: op
+    GodCraft.Heal:
+        description: Allows user to use heal command.
+        default: op
+    GodCraft.Lightning:
+        description: Allows user to use lightning command.
+        default: op
+    GodCraft.Murder:
+        description: Allows user to use murder command.
+        default: op
+    GodCraft.Nickname:
+        description: Allows user to use nickname or nick command.
+        default: op
+    GodCraft.Ping:
+        description: Allows user to use ping command.
+        default: true
+    GodCraft.Throw:
+        description: Allows user to use throw command.
+        default: op
+    GodCraft.Troll:
+        description: Allows user to use the troll command.
+        default: op
