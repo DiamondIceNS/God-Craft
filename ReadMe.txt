@@ -1,4 +1,4 @@
-Name: God
+Name: God Craft
 Created By: TheHarrisonCrafter
 website: http://dev.bukkit.org/server-mods/god-craft/
 email: theharrisoncrafter@gmail.com
