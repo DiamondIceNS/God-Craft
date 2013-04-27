@@ -2,7 +2,7 @@ Name: God Craft
 Created By: TheHarrisonCrafter
 website: http://dev.bukkit.org/server-mods/god-craft/
 email: theharrisoncrafter@gmail.com
-Current Release: 1.6
+Current Release: 1.7
 
 This is a plugin that adds commands to make you the god of your server.
 
@@ -11,6 +11,12 @@ If you need any help or wish to see more, Please email me at theharrisoncrafter@
 ----------------
 -- Change Log --
 ----------------
+----
+1.7
+----
+* Fixed major errors relating to commands used on offline players
+* Fixed errors in configuration file loading
+* Fixed nick alias for nickname command
 ----
 1.6
 ----

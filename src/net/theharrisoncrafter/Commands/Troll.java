@@ -8,10 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Troll implements CommandExecutor{
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){		
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){	
+		
 		if(sender instanceof Player){
 			if(sender.hasPermission("GodCraft.Troll")){
 				Player targetPlayer;
+				
 				if(args.length > 1){
 					return false;
 				}
@@ -47,7 +49,7 @@ public class Troll implements CommandExecutor{
 			
 			targetPlayer = Bukkit.getPlayer(args[0]);
 			
-			if(!targetPlayer.isOnline()){
+			if(targetPlayer == null){
 				sender.sendMessage(ChatColor.RED + "That player is not online!");
 				return true;
 			}		

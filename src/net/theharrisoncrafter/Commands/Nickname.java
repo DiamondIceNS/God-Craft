@@ -1,5 +1,16 @@
 package net.theharrisoncrafter.Commands;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,7 +19,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Nickname implements CommandExecutor{
+	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
+		
 		if(sender instanceof Player){
 			if(sender.hasPermission("GodCraft.Nickname")){
 				Player targetPlayer;
@@ -28,14 +41,15 @@ public class Nickname implements CommandExecutor{
 				else{
 					targetPlayer = sender.getServer().getPlayer(args[0]);
 					newName = args[1];
-					if (!(targetPlayer instanceof Player)){
-						sender.sendMessage(ChatColor.RED + "This command must be used on a player by a player!");
-						return true;
-					}
-					if(!(targetPlayer.isOnline())){
-						sender.sendMessage(ChatColor.RED + "That player is not online!");
-						return true;
-					}
+				}
+				
+				if(targetPlayer == null){
+					sender.sendMessage(ChatColor.RED + "That player is not online!");
+					return true;
+				}
+				if (!(targetPlayer instanceof Player)){
+					sender.sendMessage(ChatColor.RED + "This command must be used on a player!");
+					return true;
 				}
 				
 				setNickName(targetPlayer, newName);
@@ -54,22 +68,22 @@ public class Nickname implements CommandExecutor{
 				return false;
 			}
 			
+			targetPlayer = Bukkit.getPlayer(args[0]);
+			
+			if(targetPlayer == null){
+				sender.sendMessage(ChatColor.RED + "That player is not online!");
+				return true;
+			}
+			if (!(targetPlayer instanceof Player)){
+				sender.sendMessage(ChatColor.RED + "This command must be used on a player!");
+				return true;
+			}
+			
 			if(args.length == 1){
-				targetPlayer = Bukkit.getPlayer(args[0]);
 				newName = Bukkit.getPlayer(args[0]).getName();
 			}
 			else{
-				targetPlayer = Bukkit.getPlayer(args[0]);
 				newName = args[1];
-				
-				if (!(targetPlayer instanceof Player)){
-					sender.sendMessage(ChatColor.RED + "This command must be used on a player!");
-					return true;
-				}
-				if(!(targetPlayer.isOnline())){
-					sender.sendMessage(ChatColor.RED + "That player is not online!");
-					return true;
-				}
 			}
 			
 			setNickName(targetPlayer, newName);
@@ -77,7 +91,7 @@ public class Nickname implements CommandExecutor{
 		}
 	}
 	
-	public void setNickName(Player player, String name){
+	public static void setNickName(Player player, String name){
 		player.setPlayerListName(name);
 		player.setDisplayName(name);
 	}

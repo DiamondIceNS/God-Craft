@@ -1,5 +1,5 @@
 name: GodCraft
-version: 1.6
+version: 1.7
 author: TheHarrisonCrafter
 main: net.theharrisoncrafter.God
 website: http://dev.bukkit.org/server-mods/god-craft/
@@ -34,7 +34,7 @@ commands:
   nickname:
     description: Change players chat and list name.
     usage: /nickname [username] <newname>
-    alius: nick
+    aliases: nick
   ping:
     description: This is a Ping utility.
     usage: /ping

@@ -19,30 +19,26 @@ public class Throw implements CommandExecutor{
 				
 				if(args.length >1){
 					targetPlayer = sender.getServer().getPlayer(args[0]);
-					
-					if(args[1].toLowerCase().equals("egg")){
-						targetPlayer.throwEgg();
-					}
-					else if(args[1].toLowerCase().equals("snowball")){
-						targetPlayer.throwSnowball();
-					}
-					else if(args[1].toLowerCase().equals("arrow")){
-						targetPlayer.shootArrow();
-					}
 				}
 				else{
 					targetPlayer = (Player) sender;
-					
-					if(args[0].toLowerCase().equals("egg")){
-						targetPlayer.throwEgg();
-					}
-					else if(args[0].toLowerCase().equals("snowball")){
-						targetPlayer.throwSnowball();
-					}
-					else if(args[0].toLowerCase().equals("arrow")){
-						targetPlayer.shootArrow();
-					}
 				}
+				
+				if(targetPlayer == null){
+					sender.sendMessage(ChatColor.RED + "That player is not online!");
+					return true;
+				}
+				
+				if(args[1].toLowerCase().equals("egg")){
+					targetPlayer.throwEgg();
+				}
+				else if(args[1].toLowerCase().equals("snowball")){
+					targetPlayer.throwSnowball();
+				}
+				else if(args[1].toLowerCase().equals("arrow")){
+					targetPlayer.shootArrow();
+				}
+				
 				return true;
 			}
 			else{
@@ -58,6 +54,11 @@ public class Throw implements CommandExecutor{
 			}
 			
 			targetPlayer = Bukkit.getPlayer(args[0]);
+			
+			if(targetPlayer == null){
+				sender.sendMessage(ChatColor.RED + "That player is not online!");
+				return true;
+			}
 			
 			if(args[1].toLowerCase().equals("egg")){
 				targetPlayer.throwEgg();

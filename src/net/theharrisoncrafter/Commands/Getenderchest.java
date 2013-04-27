@@ -15,14 +15,14 @@ public class Getenderchest implements CommandExecutor{
 			}
 			
 			Player targetPlayer = sender.getServer().getPlayer(args[0]);
-			if(targetPlayer.isOnline()){
-				((Player) sender).openInventory(targetPlayer.getEnderChest());
+			
+			if(targetPlayer == null){
+				sender.sendMessage(ChatColor.RED + "That player is not online!");
 				return true;
 			}
-			else{
-				sender.sendMessage(ChatColor.RED + "That plyer is not online");
-				return true;
-			}
+			
+			((Player) sender).openInventory(targetPlayer.getEnderChest());
+			return true;
 		}
 		else{
 			sender.sendMessage(ChatColor.RED + "You can not send that command!");
