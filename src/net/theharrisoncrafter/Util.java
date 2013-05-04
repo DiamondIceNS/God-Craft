@@ -12,4 +12,16 @@ public class Util {
 			return false;
 		}
 	}
+	
+	public static boolean isParsableToBoolean(String i){
+		try
+		{
+			Boolean.parseBoolean(i);
+			return true;
+		}
+		catch(NumberFormatException nfe)
+		{
+			return false;
+		}
+	}
 }

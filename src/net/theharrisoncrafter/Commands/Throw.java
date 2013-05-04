@@ -12,16 +12,19 @@ public class Throw implements CommandExecutor{
 		if(sender instanceof Player){
 			if(sender.hasPermission("GodCraft.Throw")){
 				Player targetPlayer;
+				String item;
 				
 				if(args.length < 1 || args.length > 2){
 					return false;
 				}
 				
-				if(args.length >1){
+				if(args.length > 1){
 					targetPlayer = sender.getServer().getPlayer(args[0]);
+					item = args[1];
 				}
 				else{
 					targetPlayer = (Player) sender;
+					item = args[0];
 				}
 				
 				if(targetPlayer == null){
@@ -29,13 +32,13 @@ public class Throw implements CommandExecutor{
 					return true;
 				}
 				
-				if(args[1].toLowerCase().equals("egg")){
+				if(item.toLowerCase().equals("egg")){
 					targetPlayer.throwEgg();
 				}
-				else if(args[1].toLowerCase().equals("snowball")){
+				else if(item.toLowerCase().equals("snowball")){
 					targetPlayer.throwSnowball();
 				}
-				else if(args[1].toLowerCase().equals("arrow")){
+				else if(item.toLowerCase().equals("arrow")){
 					targetPlayer.shootArrow();
 				}
 				

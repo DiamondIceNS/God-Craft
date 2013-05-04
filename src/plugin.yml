@@ -1,5 +1,5 @@
 name: GodCraft
-version: 1.7
+version: 1.8
 author: TheHarrisonCrafter
 main: net.theharrisoncrafter.God
 website: http://dev.bukkit.org/server-mods/god-craft/
@@ -47,57 +47,57 @@ commands:
 
 permissions:
     GodCraft.*:
-        description: Gives all God Craft command permissions.
-        children:
-            GodCraft.Boom: true
-            GodCfart.Burn: true
-            GodCfart.Getcrafting: true
-            GodCfart.Getenchanting: true
-            GodCfart.Getenderchest: true
-            GodCfart.Getinventory: true
-            GodCfart.Heal: true
-            GodCfart.Lighting: true
-            GodCfart.Murder: true
-            GodCfart.Nickname: true
-            GodCfart.Ping: true
-            GodCfart.Throw: true
-            GodCfart.Troll: true
+      description: Gives all God Craft command permissions.
+      children:
+        GodCraft.Boom: true
+        GodCraft.Burn: true
+        GodCraft.Getcrafting: true
+        GodCraft.Getenchanting: true
+        GodCraft.Getenderchest: true
+        GodCraft.Getinventory: true
+        GodCraft.Heal: true
+        GodCraft.Lighting: true
+        GodCraft.Murder: true
+        GodCraft.Nickname: true
+        GodCraft.Ping: true
+        GodCraft.Throw: true
+        GodCraft.Troll: true
     GodCraft.Boom:
-        description: Allows user to use boom command.
-        default: op
+      description: Allows user to use boom command.
+      default: op
     GodCraft.Burn:
-        description: Allows user to use burn command.
-        default: op
+      description: Allows user to use burn command.
+      default: op
     GodCraft.Getcrafting:
-        descriptin: Allows user to use getcrafting command.
-        default: op
+      description: Allows user to use getcrafting command.
+      default: op
     GodCraft.Getenchanting:
-        description: Allows user to use getenchanting command.
-        defauld: op
+      description: Allows user to use getenchanting command.
+      default: op
     GodCraft.Getenderchest:
-        description: Allows user to use getenderchest command.
-        default: op
+      description: Allows user to use getenderchest command.
+      default: op
     GodCraft.Getinventory:
-        description: Allows user to use getinventory command.
-        default: op
+      description: Allows user to use getinventory command.
+      default: op
     GodCraft.Heal:
-        description: Allows user to use heal command.
-        default: op
+      description: Allows user to use heal command.
+      default: op
     GodCraft.Lightning:
-        description: Allows user to use lightning command.
-        default: op
+      description: Allows user to use lightning command.
+      default: op
     GodCraft.Murder:
-        description: Allows user to use murder command.
-        default: op
+      description: Allows user to use murder command.
+      default: op
     GodCraft.Nickname:
-        description: Allows user to use nickname or nick command.
-        default: op
+      description: Allows user to use nickname or nick command.
+      default: op
     GodCraft.Ping:
-        description: Allows user to use ping command.
-        default: true
+      description: Allows user to use ping command.
+      default: true
     GodCraft.Throw:
-        description: Allows user to use throw command.
-        default: op
+      description: Allows user to use throw command.
+      default: op
     GodCraft.Troll:
-        description: Allows user to use the troll command.
-        default: op
+      description: Allows user to use the troll command.
+      default: op

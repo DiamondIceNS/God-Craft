@@ -1,0 +1,31 @@
+#Class, plugin.yml setup, Permissions,
+#CommandIdea (posible_name) status
+Freeze ---
+Unfreeze ---
+Disorient ---
+Blind ---
+Banish ---
+SetSpawn ---
+Gotospawn ---
+Setbed ---
+Gotobed ---
+Fourcetexture ---
+Setwalkspeed ---
+Setflyspeed ---
+Setwalkspeed ---
+Setflyspeed ---
+Setsprinting ---
+Setsneeking ---
+Setflying ---
+Setplayerweather (Raincloud) ---
+Setplayettime (Timezone) ---
+Ride ---
+Setmaxair ---
+Setmaxhelth ---
+Setleval ---
+Sethealth ---
+Setflying ---
+Setfoodleval ---
+Setcompastarget ---
+Playnoise ---
+Setcanpickupitems ---

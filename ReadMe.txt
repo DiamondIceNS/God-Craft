@@ -2,7 +2,7 @@ Name: God Craft
 Created By: TheHarrisonCrafter
 website: http://dev.bukkit.org/server-mods/god-craft/
 email: theharrisoncrafter@gmail.com
-Current Release: 1.7
+Current Release: 1.8
 
 This is a plugin that adds commands to make you the god of your server.
 
@@ -11,6 +11,15 @@ If you need any help or wish to see more, Please email me at theharrisoncrafter@
 ----------------
 -- Change Log --
 ----------------
+----
+1.8
+----
++ Added Support for CB 1.2.5 to 1.5.2 (only tested on 1.4.7, 1.5.1, and 1.5.2 use at own risk).
+^ Updated Version Tracking System.
+* Fixed Problems using getinventory on offline players.
+* Fixed Problems using getenderchest on self.
+* Fixed Problems with using throw command on self.
+* Fixed GodCraft.* Permissions.
 ----
 1.7
 ----
