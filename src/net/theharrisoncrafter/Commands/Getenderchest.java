@@ -12,6 +12,16 @@ public class Getenderchest implements CommandExecutor{
 		
 		if(sender instanceof Player && sender.hasPermission("GodCraft.Getenderchest")){
 			Player targetPlayer;
+			String version = Bukkit.getBukkitVersion();
+			
+			if(version.startsWith("1")){
+				version.replaceFirst("1.", "");
+				version.substring(0, 1);
+				if(Integer.parseInt(version.substring(0, 1)) < 3){
+					sender.sendMessage("This version of minecraft is too old for that!");
+					return true;
+				}
+			}
 			
 			if(args.length > 1){
 				return false;

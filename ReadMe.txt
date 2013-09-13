@@ -2,7 +2,7 @@ Name: God Craft
 Created By: TheHarrisonCrafter
 website: http://dev.bukkit.org/server-mods/god-craft/
 email: theharrisoncrafter@gmail.com
-Current Release: 1.8
+Current Release: 1.9
 
 This is a plugin that adds commands to make you the god of your server.
 
@@ -12,9 +12,20 @@ If you need any help or wish to see more, Please email me at theharrisoncrafter@
 -- Change Log --
 ----------------
 ----
+1.9
+----
++ Added Feed command.
++ Added Starve command.
++ Added Setmaxair command.
++ Added Setmaxhealth commad.
++ Added Setlevel command.
++ Added Sethealth command.
++ Added Setfoodlevel command.
++ Added Support for CB 1.2.5 to 1.6.2(only tested on 1.2.5, 1.4.7, 1.5.1, 1.5.2 and 1.6.2 use at own risk).
+----
 1.8
 ----
-+ Added Support for CB 1.2.5 to 1.5.2 (only tested on 1.4.7, 1.5.1, and 1.5.2 use at own risk).
++ Added Support for CB 1.4.7 to 1.5.2 (only tested on 1.4.7, 1.5.1, and 1.5.2 use at own risk).
 ^ Updated Version Tracking System.
 * Fixed Problems using getinventory on offline players.
 * Fixed Problems using getenderchest on self.

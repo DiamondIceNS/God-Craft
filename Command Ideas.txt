@@ -1,31 +1,27 @@
-#Class, plugin.yml setup, Permissions,
+#Class; plugin.yml setup; Permissions; Read me
 #CommandIdea (posible_name) status
-Freeze ---
-Unfreeze ---
-Disorient ---
-Blind ---
-Banish ---
-SetSpawn ---
-Gotospawn ---
-Setbed ---
-Gotobed ---
-Fourcetexture ---
-Setwalkspeed ---
-Setflyspeed ---
-Setwalkspeed ---
-Setflyspeed ---
-Setsprinting ---
-Setsneeking ---
-Setflying ---
-Setplayerweather (Raincloud) ---
-Setplayettime (Timezone) ---
-Ride ---
-Setmaxair ---
-Setmaxhelth ---
-Setleval ---
-Sethealth ---
-Setflying ---
-Setfoodleval ---
-Setcompastarget ---
-Playnoise ---
-Setcanpickupitems ---
+Freeze ----
+Unfreeze ----
+Disorient ----
+Blind ----
+Banish ----
+SetSpawn ----
+Gotospawn ----
+Setbed ----
+Gotobed ----
+Fourcetexture ----
+Setwalkspeed ----
+Setflyspeed ----
+Setsprinting ----
+Setsneeking ----
+Setflying ----
+Setplayerweather (Raincloud) ----
+Setplayettime (Timezone) ----
+Ride ----
+Setcompastarget ----
+Playnoise ----
+Setcanpickupitems ----
+
+for the console:
+Listinventory (what the player is wearing, what they are holding, what is in there invenoty...) ----
+Find (list the direction and locaton of a player) ----
