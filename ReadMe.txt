@@ -1,12 +1,13 @@
 Name: God Craft
 Created By: TheHarrisonCrafter
-website: http://dev.bukkit.org/server-mods/god-craft/
-email: theharrisoncrafter@gmail.com
-Current Release: 1.9
+Maintained By: DiamondIceNS
+website: https://github.com/DiamondIceNS/God-Craft
+email: fawfulcopter@gmail.com
+Current Release: pre-2.0
 
 This is a plugin that adds commands to make you the god of your server.
 
-If you need any help or wish to see more, Please email me at theharrisoncrafter@gmail.com
+If you need any help or wish to see more, Please email to fawfulcopter@gmail.com
 
 ----------------
 -- Change Log --

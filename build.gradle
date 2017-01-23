@@ -1,0 +1,35 @@
+buildscript {
+    ext.kotlin_version = '1.0.6'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'kotlin'
+
+group = 'co.orre'
+version = 'pre-2.0'
+description = """Become the god of your server"""
+ext.url = 'https://github.com/DiamondIceNS/God-Craft'
+
+repositories {
+    maven { url 'https://maven-central.storage.googleapis.com' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.spigotmc', name: 'spigot-api', version:'1.11.2-R0.1-SNAPSHOT'
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version:'1.0.0-rc-1036'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
