@@ -1,7 +1,7 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
-import co.orre.godcraft.Util
+import co.orre.goddesscraft.Goddess
+import co.orre.goddesscraft.Util
 import org.bukkit.Bukkit
 import org.bukkit.attribute.Attribute
 import org.bukkit.ChatColor as CC
@@ -10,10 +10,10 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class SetMaxHealth(val plugin: God) : CommandExecutor {
+class SetMaxHealth(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.set_max_health")) {
+            if (sender.hasPermission("goddesscraft.set_max_health")) {
                 var maxHealth = 0
                 var targetPlayer: Player? = null
 

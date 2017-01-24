@@ -1,3 +1,5 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 buildscript {
     ext.kotlin_version = '1.0.6'
 
@@ -17,9 +19,9 @@ plugins {
 apply plugin: 'kotlin'
 
 group = 'co.orre'
-version = 'pre-2.0'
-description = """Become the god of your server"""
-ext.url = 'https://github.com/DiamondIceNS/God-Craft'
+version = '2.0.1'
+description = """Useful and fun tools to let you rule your server like a god!"""
+ext.url = 'https://dev.bukkit.org/projects/goddess-craft'
 
 repositories {
     maven { url 'https://maven-central.storage.googleapis.com' }
@@ -33,4 +35,12 @@ dependencies {
     compile group: 'org.spigotmc', name: 'spigot-api', version:'1.11.2-R0.1-SNAPSHOT'
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version:'1.0.0-rc-1036'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+processResources {
+    filter ReplaceTokens, tokens: [
+        'DESCRIPTION': project.property('description'),
+        'URL': project.property('url'),
+        'VERSION': project.property('version')
+    ]
 }

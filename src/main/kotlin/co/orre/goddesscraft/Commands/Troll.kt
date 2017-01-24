@@ -1,6 +1,6 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
@@ -8,10 +8,10 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class Troll(val plugin: God) : CommandExecutor {
+class Troll(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.troll")) {
+            if (sender.hasPermission("goddesscraft.troll")) {
                 val targetPlayer: Player?
 
                 when {
@@ -28,6 +28,8 @@ class Troll(val plugin: God) : CommandExecutor {
 
                 targetPlayer.world.createExplosion(targetPlayer.location, 0f)
                 targetPlayer.world.strikeLightningEffect(targetPlayer.location)
+                sender.sendMessage("${CC.YELLOW}u mad?")
+                plugin.logDebug("${sender.name} trolled ${targetPlayer.name}")
                 return true
             }
             sender.sendMessage("${CC.RED}You do not have permissions to do that!")
@@ -42,6 +44,8 @@ class Troll(val plugin: God) : CommandExecutor {
 
         targetPlayer.world.createExplosion(targetPlayer.location, 0f)
         targetPlayer.world.strikeLightningEffect(targetPlayer.location)
+        sender.sendMessage("${CC.YELLOW}u mad?")
+        plugin.logDebug("Console trolled ${targetPlayer.name}")
         return true
     }
 }

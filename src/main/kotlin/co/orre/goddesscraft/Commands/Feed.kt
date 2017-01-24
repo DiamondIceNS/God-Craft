@@ -1,6 +1,6 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
@@ -8,10 +8,10 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class Starve(val plugin: God) : CommandExecutor {
+class Feed(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.starve")) {
+            if (sender.hasPermission("goddesscraft.feed")) {
                 if (args.size > 1) return false
                 val targetPlayer = if (args.isEmpty()) sender else Bukkit.getPlayer(args[0])
 
@@ -20,9 +20,9 @@ class Starve(val plugin: God) : CommandExecutor {
                     return true
                 }
 
-                targetPlayer.foodLevel = 0
-                sender.sendMessage("${CC.YELLOW}Starved!")
-                plugin.logDebug("${sender.name} made ${targetPlayer.name} starve")
+                targetPlayer.foodLevel = 20
+                sender.sendMessage("${CC.YELLOW}Yum!")
+                plugin.logDebug("${sender.name} fed ${targetPlayer.name}")
                 return true
             }
             sender.sendMessage("${CC.RED}You do not have permissions to do that!")
@@ -36,9 +36,9 @@ class Starve(val plugin: God) : CommandExecutor {
             return true
         }
 
-        targetPlayer.foodLevel = 0
-        sender.sendMessage("${CC.YELLOW}Starved!")
-        plugin.logDebug("Console made ${targetPlayer.name} starve")
+        targetPlayer.foodLevel = 20
+        sender.sendMessage("${CC.YELLOW}Yum!")
+        plugin.logDebug("Console fed ${targetPlayer.name}")
         return true
     }
 

@@ -1,4 +1,4 @@
-package co.orre.godcraft
+package co.orre.goddesscraft
 
 import org.bukkit.plugin.Plugin
 

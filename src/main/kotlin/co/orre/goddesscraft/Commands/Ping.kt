@@ -1,16 +1,16 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class Ping(val plugin: God) : CommandExecutor {
+class Ping(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.ping")) {
+            if (sender.hasPermission("goddesscraft.ping")) {
                 sender.sendMessage("${CC.GREEN}Pong!")
                 plugin.logDebug("Received a ping from ${sender.name}")
                 return true

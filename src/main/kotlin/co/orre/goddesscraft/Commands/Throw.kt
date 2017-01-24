@@ -1,6 +1,6 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
@@ -11,10 +11,10 @@ import org.bukkit.entity.Egg
 import org.bukkit.entity.Player
 import org.bukkit.entity.Snowball
 
-class Throw(val plugin: God) : CommandExecutor {
+class Throw(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.throw")) {
+            if (sender.hasPermission("goddesscraft.throw")) {
                 val targetPlayer: Player?
                 val item: String
 

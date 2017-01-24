@@ -1,9 +1,9 @@
-package co.orre.godcraft
+package co.orre.goddesscraft
 
-import co.orre.godcraft.Commands.*
+import co.orre.goddesscraft.Commands.*
 import org.bukkit.plugin.java.JavaPlugin
 
-class God : JavaPlugin() {
+class Goddess : JavaPlugin() {
 
     val configuration = Configuration(this)
 
@@ -21,6 +21,7 @@ class God : JavaPlugin() {
         getCommand("getenchanting").executor = GetEnchanting(this)
         getCommand("getenderchest").executor = GetEnderChest(this)
         getCommand("getinventory").executor = GetInventory(this)
+        getCommand("goddesscraft").executor = GoddessCraft(this)
         getCommand("heal").executor = Heal(this)
         getCommand("lightning").executor = Lightning(this)
         getCommand("murder").executor = Murder(this)
@@ -41,5 +42,10 @@ class God : JavaPlugin() {
     fun logDebug(msg: String) {
         if (!configuration.DEBUG) return
         logger.info(msg)
+    }
+
+    fun reload() {
+        reloadConfig()
+        configuration.load()
     }
 }

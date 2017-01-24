@@ -1,6 +1,6 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
@@ -8,10 +8,10 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class GetInventory(val plugin: God) : CommandExecutor {
+class GetInventory(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
 
-        if (sender is Player && sender.hasPermission("godcraft.get_inventory")) {
+        if (sender is Player && sender.hasPermission("goddesscraft.get_inventory")) {
             if (args.size > 1) return false
             val targetPlayer = if (args.isEmpty()) sender else Bukkit.getPlayer(args[0])
 

@@ -1,6 +1,6 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
+import co.orre.goddesscraft.Goddess
 import org.bukkit.ChatColor as CC
 import org.bukkit.Material
 import org.bukkit.command.Command
@@ -8,9 +8,9 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class Lightning(val plugin: God) : CommandExecutor {
+class Lightning(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
-        if (sender is Player && sender.hasPermission("godcraft.lightning")) {
+        if (sender is Player && sender.hasPermission("goddesscraft.lightning")) {
             if (args.size > 1) return false
 
             val set: Set<Material>? = null

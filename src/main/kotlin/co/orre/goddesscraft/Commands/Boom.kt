@@ -1,7 +1,7 @@
-package co.orre.godcraft.Commands
+package co.orre.goddesscraft.Commands
 
-import co.orre.godcraft.God
-import co.orre.godcraft.Util
+import co.orre.goddesscraft.Goddess
+import co.orre.goddesscraft.Util
 import org.bukkit.Bukkit
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
@@ -9,10 +9,10 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.ChatColor as CC
 
-class Boom (val plugin: God) : CommandExecutor {
+class Boom (val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("godcraft.boom")) {
+            if (sender.hasPermission("goddesscraft.boom")) {
                 var explosionPower = 0f
                 var targetPlayer: Player? = null
 

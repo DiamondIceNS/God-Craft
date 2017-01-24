@@ -1,11 +1,11 @@
-name: GodCraft
-version: 2.0
-description: Become the god of your server!
+name: GoddessCraft
+version: '@VERSION@'
+description: '@DESCRIPTION@'
 
 authors: [DiamondIceNS, TheHarrisonCrafter]
-website: https://github.com/DiamondIceNS/God-Craft
+website: '@URL@'
 
-main: co.orre.godcraft.God
+main: co.orre.goddesscraft.Goddess
 
 commands:
   boom:
@@ -29,6 +29,10 @@ commands:
   getinventory:
     description: Shows a players inventory.
     usage: /getinventory <username>
+  goddesscraft:
+    description: Used to make changes to the plugin
+    usage: /goddesscraft [reload|debug] <args>
+    alias: gc
   heal:
     description: Gives player full health.
     usage: /heal <username>
@@ -71,86 +75,90 @@ commands:
     usage: /troll <username>
 
 permissions:
-    godcraft.*:
-      description: Gives all God Craft command permissions.
+    goddesscraft.*:
+      description: Gives all Goddess Craft command permissions.
       children:
-        godcraft.boom: true
-        godcraft.burn: true
-        godcraft.feed: true
-        godcraft.get_crafting: true
-        godcraft.get_enchanting: true
-        godcraft.getEnderChest: true
-        godcraft.getInventory: true
-        godcraft.heal: true
-        godcraft.lighting: true
-        godcraft.murder: true
-        godcraft.nickname: true
-        godcraft.ping: true
-        godcraft.set_food_level: true
-        godcraft.set_health: true
-        godcraft.set_level: true
-        godcraft.set_max_air: true
-        godcraft.set_max_health: true
-        godcraft.starve: true
-        godcraft.throw: true
-        godcraft.troll: true
-    godcraft.Bboom:
+        goddesscraft.boom: true
+        goddesscraft.burn: true
+        goddesscraft.feed: true
+        goddesscraft.get_crafting: true
+        goddesscraft.get_enchanting: true
+        goddesscraft.get_ender_chest: true
+        goddesscraft.get_inventory: true
+        goddesscraft.goddess_craft: true
+        goddesscraft.heal: true
+        goddesscraft.lighting: true
+        goddesscraft.murder: true
+        goddesscraft.nickname: true
+        goddesscraft.ping: true
+        goddesscraft.set_food_level: true
+        goddesscraft.set_health: true
+        goddesscraft.set_level: true
+        goddesscraft.set_max_air: true
+        goddesscraft.set_max_health: true
+        goddesscraft.starve: true
+        goddesscraft.throw: true
+        goddesscraft.troll: true
+    goddesscraft.boom:
       description: Allows user to use boom command.
       default: op
-    godcraft.burn:
+    goddesscraft.burn:
       description: Allows user to use burn command.
       default: op
-    godcraft.feed:
+    goddesscraft.feed:
       description: Allows user to use feed command.
       default: op
-    godcraft.get_crafting:
+    goddesscraft.get_crafting:
       description: Allows user to use getcrafting command.
       default: op
-    godcraft.get_enchanting:
+    goddesscraft.get_enchanting:
       description: Allows user to use getenchanting command.
       default: op
-    godcraft.get_ender_chest:
+    goddesscraft.get_ender_chest:
       description: Allows user to use getenderchest command.
       default: op
-    godcraft.get_inventory:
+    goddesscraft.get_inventory:
       description: Allows user to use getinventory command.
       default: op
-    godcraft.heal:
+    goddesscraft.goddess_craft:
+          description: Allows user to use goddesscraft command.
+          default: op
+    goddesscraft.heal:
       description: Allows user to use heal command.
       default: op
-    godcraft.lightning:
+    goddesscraft.lightning:
       description: Allows user to use lightning command.
       default: op
-    godcraft.murder:
+    goddesscraft.murder:
       description: Allows user to use murder command.
       default: op
-    godcraft.nickname:
+    goddesscraft.nickname:
       description: Allows user to use nickname or nick command.
       default: op
-    godcraft.ping:
+    goddesscraft.ping:
       description: Allows user to use ping command.
       default: true
-    godcraft.set_food_level:
+    goddesscraft.set_food_level:
       description: Allows user to use setfoodlevel command.
       default: op
-    godcraft.set_health:
+    goddesscraft.set_health:
       description: Allows user to use sethealth command.
       default: op
-    godcraft.set_level:
+    goddesscraft.set_level:
       description: Allows user to use setlevel command.
       default: op
-    godcraft.set_max_air:
+    goddesscraft.set_max_air:
       description: Allows user to use setmaxair command.
       default: op
-    godcraft.set_max_health:
+    goddesscraft.set_max_health:
       description: Allows user to use setmaxair command.
       default: op
-    godcraft.starve:
+    goddesscraft.starve:
       Description: Allows user to use starve command.
       default: op
-    godcraft.throw:
+    goddesscraft.throw:
       description: Allows user to use throw command.
       default: op
-    godcraft.troll:
+    goddesscraft.troll:
       description: Allows user to use the troll command.
       default: op
