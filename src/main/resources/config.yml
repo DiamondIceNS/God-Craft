@@ -1,6 +1,6 @@
 debug: false
-maxboompower: 10
-maxair: 20
-maxhealth: 20
-maxlevel: 20
-maxfoodlevel: 20
+max_boom_power: 10
+max_air: 20
+max_health: 20
+max_level: 30
+max_food_level: 20

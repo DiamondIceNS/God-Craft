@@ -1,8 +1,12 @@
 name: GodCraft
-version: pre-2.0
+version: 2.0
+description: Become the god of your server!
+
 authors: [DiamondIceNS, TheHarrisonCrafter]
-main: co.orre.godcraft.God
 website: https://github.com/DiamondIceNS/God-Craft
+
+main: co.orre.godcraft.God
+
 commands:
   boom:
     description: Creates an explosion around a player.
@@ -29,8 +33,8 @@ commands:
     description: Gives player full health.
     usage: /heal <username>
   lightning:
-    description: Shoots a bolt of lightning on the block that the players croshair is pointing at.
-    usage: /lightning [damage 1 or 0]
+    description: Shoots a bolt of lightning on the block that the players croshair is pointing at. Set 1 to make the bolt deal damage and set things on fire.
+    usage: /lightning [0|1]
   murder:
     description: Kills a player without warning.
     usage: /murder <username>
@@ -58,95 +62,95 @@ commands:
     usage: /setmaxhealth <username> [healthleval]
   starve:
     description: Set a players food bar to zero.
-    usage /starve [username]
+    usage: /starve [username]
   throw:
     description: Make a player throw a snowball, egg, or arrow.
-    usage: /throw [username] <egg,snowball,arrow>
+    usage: /throw [username] <egg|snowball|arrow>
   troll:
     description: Troll a player.
     usage: /troll <username>
 
 permissions:
-    GodCraft.*:
+    godcraft.*:
       description: Gives all God Craft command permissions.
       children:
-        GodCraft.Boom: true
-        GodCraft.Burn: true
-        GodCraft.Feed: true
-        GodCraft.Getcrafting: true
-        GodCraft.Getenchanting: true
-        GodCraft.Getenderchest: true
-        GodCraft.Getinventory: true
-        GodCraft.Heal: true
-        GodCraft.Lighting: true
-        GodCraft.Murder: true
-        GodCraft.Nickname: true
-        GodCraft.Ping: true
-        GodCraft.Setfoodlevel: true
-        GodCraft.Sethealth: true
-        GodCraft.Setlevel: true
-        GodCraft.Sermaxair: true
-        GodCraft.Setmaxhealth: true
-        GodCraft.Starve: true
-        GodCraft.Throw: true
-        GodCraft.Troll: true
-    GodCraft.Boom:
+        godcraft.boom: true
+        godcraft.burn: true
+        godcraft.feed: true
+        godcraft.get_crafting: true
+        godcraft.get_enchanting: true
+        godcraft.getEnderChest: true
+        godcraft.getInventory: true
+        godcraft.heal: true
+        godcraft.lighting: true
+        godcraft.murder: true
+        godcraft.nickname: true
+        godcraft.ping: true
+        godcraft.set_food_level: true
+        godcraft.set_health: true
+        godcraft.set_level: true
+        godcraft.set_max_air: true
+        godcraft.set_max_health: true
+        godcraft.starve: true
+        godcraft.throw: true
+        godcraft.troll: true
+    godcraft.Bboom:
       description: Allows user to use boom command.
       default: op
-    GodCraft.Burn:
+    godcraft.burn:
       description: Allows user to use burn command.
       default: op
-    GodCraft.Feed:
+    godcraft.feed:
       description: Allows user to use feed command.
       default: op
-    GodCraft.Getcrafting:
+    godcraft.get_crafting:
       description: Allows user to use getcrafting command.
       default: op
-    GodCraft.Getenchanting:
+    godcraft.get_enchanting:
       description: Allows user to use getenchanting command.
       default: op
-    GodCraft.Getenderchest:
+    godcraft.get_ender_chest:
       description: Allows user to use getenderchest command.
       default: op
-    GodCraft.Getinventory:
+    godcraft.get_inventory:
       description: Allows user to use getinventory command.
       default: op
-    GodCraft.Heal:
+    godcraft.heal:
       description: Allows user to use heal command.
       default: op
-    GodCraft.Lightning:
+    godcraft.lightning:
       description: Allows user to use lightning command.
       default: op
-    GodCraft.Murder:
+    godcraft.murder:
       description: Allows user to use murder command.
       default: op
-    GodCraft.Nickname:
+    godcraft.nickname:
       description: Allows user to use nickname or nick command.
       default: op
-    GodCraft.Ping:
+    godcraft.ping:
       description: Allows user to use ping command.
       default: true
-    GodCraft.Setfoodlevel:
+    godcraft.set_food_level:
       description: Allows user to use setfoodlevel command.
       default: op
-    GodCraft.Sethealth:
+    godcraft.set_health:
       description: Allows user to use sethealth command.
       default: op
-    GodCraft.Setlevel:
+    godcraft.set_level:
       description: Allows user to use setlevel command.
       default: op
-    GodCraft.Setmaxair:
+    godcraft.set_max_air:
       description: Allows user to use setmaxair command.
       default: op
-    GodCraft.Setmaxhealth:
+    godcraft.set_max_health:
       description: Allows user to use setmaxair command.
       default: op
-    GodCraft.Starve:
+    godcraft.starve:
       Description: Allows user to use starve command.
       default: op
-    GodCraft.Throw:
+    godcraft.throw:
       description: Allows user to use throw command.
       default: op
-    GodCraft.Troll:
+    godcraft.troll:
       description: Allows user to use the troll command.
       default: op

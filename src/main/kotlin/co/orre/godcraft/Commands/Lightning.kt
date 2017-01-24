@@ -1,7 +1,7 @@
 package co.orre.godcraft.Commands
 
 import co.orre.godcraft.God
-import org.bukkit.ChatColor
+import org.bukkit.ChatColor as CC
 import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
@@ -10,31 +10,33 @@ import org.bukkit.entity.Player
 
 class Lightning(val plugin: God) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
-        if (sender is Player && sender.hasPermission("GodCraft.Lightning")) {
-            if (args.size >= 2) {
-                return false
-            }
+        if (sender is Player && sender.hasPermission("godcraft.lightning")) {
+            if (args.size > 1) return false
 
             val set: Set<Material>? = null
             if (args.size == 1) {
-                if (args[0] == "1") {
-                    sender.world.strikeLightning(sender.getTargetBlock(set, 10000).location)
-                    sender.sendMessage(ChatColor.YELLOW.toString() + "Kaboom!")
-                    return true
-                } else if (args[0] == "0") {
-                    sender.world.strikeLightningEffect(sender.getTargetBlock(set, 10000).location)
-                    sender.sendMessage(ChatColor.YELLOW.toString() + "Kaboom!")
-                    return true
+                when (args[0]) {
+                    "1" -> {
+                        sender.world.strikeLightning(sender.getTargetBlock(set, 10000).location)
+                        sender.sendMessage("${CC.YELLOW}Kaboom!")
+                        plugin.logDebug("${sender.name} cast down a bolt of hard lightning")
+                        return true
+                    }
+                    "0" -> {
+                        sender.world.strikeLightningEffect(sender.getTargetBlock(set, 10000).location)
+                        sender.sendMessage("${CC.YELLOW}Kaboom!")
+                        plugin.logDebug("${sender.name} cast down a bolt of soft lightning")
+                        return true
+                    }
+                    else -> return false
                 }
-            } else {
-                sender.world.strikeLightningEffect(sender.getTargetBlock(set, 10000).location)
-                sender.sendMessage(ChatColor.YELLOW.toString() + "Kaboom!")
-                return true
             }
-        } else {
-            sender.sendMessage(ChatColor.RED.toString() + "You can not send that command!")
+            sender.world.strikeLightningEffect(sender.getTargetBlock(set, 10000).location)
+            sender.sendMessage("${CC.YELLOW}Kaboom!")
+            plugin.logDebug("${sender.name} cast down a bolt of soft lightning")
             return true
         }
-        return false
+        sender.sendMessage("${CC.RED}You do not have permissions to do that!")
+        return true
     }
 }

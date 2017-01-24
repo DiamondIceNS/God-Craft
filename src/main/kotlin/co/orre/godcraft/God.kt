@@ -1,9 +1,6 @@
 package co.orre.godcraft
 
 import co.orre.godcraft.Commands.*
-import org.bukkit.command.Command
-import org.bukkit.command.CommandExecutor
-import org.bukkit.command.CommandSender
 import org.bukkit.plugin.java.JavaPlugin
 
 class God : JavaPlugin() {
@@ -40,19 +37,6 @@ class God : JavaPlugin() {
     }
 
     override fun onDisable() {}
-
-    override fun onCommand(sender: CommandSender?, command: Command?, label: String?, args: Array<String>?): Boolean {
-        try {
-            val c = command!!.name
-            return (Class.forName("net.theharrisoncrafter.Commands." + c.toUpperCase()[0] + c.toLowerCase().substring(1)).getConstructor().newInstance() as CommandExecutor).onCommand(sender, command, label, args)
-        } catch (e: Exception) {
-            sender!!.sendMessage("Something went wrong (" + e.javaClass + "): " + e.message + "!(" + e.cause + ")")
-            sender.sendMessage("Please report this problem to theharrisoncrafter@gmail.com with this error and a list of the steps you took to get this error.")
-            e.printStackTrace()
-        }
-
-        return false
-    }
 
     fun logDebug(msg: String) {
         if (!configuration.DEBUG) return

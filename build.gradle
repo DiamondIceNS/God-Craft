@@ -23,7 +23,8 @@ ext.url = 'https://github.com/DiamondIceNS/God-Craft'
 
 repositories {
     maven { url 'https://maven-central.storage.googleapis.com' }
-    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
 
     jcenter()
 }

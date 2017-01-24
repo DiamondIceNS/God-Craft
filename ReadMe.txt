@@ -3,7 +3,7 @@ Created By: TheHarrisonCrafter
 Maintained By: DiamondIceNS
 website: https://github.com/DiamondIceNS/God-Craft
 email: fawfulcopter@gmail.com
-Current Release: pre-2.0
+Current Release: 2.0
 
 This is a plugin that adds commands to make you the god of your server.
 
@@ -12,6 +12,14 @@ If you need any help or wish to see more, Please email to fawfulcopter@gmail.com
 ----------------
 -- Change Log --
 ----------------
+----
+2.0
+----
++ Added verbose debug logging
+^ Upgraded to Spigot 1.11.2
+* Fixed a few issues with bad logic checks and misspelled permissions
+* Refactored codebase to Kotlin and Gradle
+* DiamondIceNS has taken over! >:D
 ----
 1.9
 ----

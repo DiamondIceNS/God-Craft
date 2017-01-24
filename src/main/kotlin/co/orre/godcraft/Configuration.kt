@@ -15,10 +15,10 @@ class Configuration(val plugin: Plugin) {
         plugin.reloadConfig()
 
         DEBUG = plugin.config.getBoolean("debug", false)
-        MAX_BOOM_POWER = plugin.config.getInt("maxboompower", 10)
-        MAX_AIR = plugin.config.getInt("maxair", 20)
-        MAX_HEALTH = plugin.config.getInt("maxhealth", 20)
-        MAX_LEVEL = plugin.config.getInt("maxlevel", 20)
-        MAX_FOOD_LEVEL = plugin.config.getInt("maxfoodlevel", 20)
+        MAX_BOOM_POWER = plugin.config.getInt("max_boom_power", 10)
+        MAX_AIR = plugin.config.getInt("max_air", 20)
+        MAX_HEALTH = plugin.config.getInt("max_health", 20)
+        MAX_LEVEL = plugin.config.getInt("max_level", 20)
+        MAX_FOOD_LEVEL = plugin.config.getInt("max_food_level", 20)
     }
 }

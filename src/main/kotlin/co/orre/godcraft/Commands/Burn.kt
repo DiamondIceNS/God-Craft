@@ -11,17 +11,9 @@ import org.bukkit.ChatColor as CC
 class Burn(val plugin: God) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            if (sender.hasPermission("GodCraft.Burn")) {
-                val targetPlayer: Player?
-                if (args.size >= 2) {
-                    return false
-                } else {
-                    if (args.isEmpty()) {
-                        targetPlayer = sender
-                    } else {
-                        targetPlayer = sender.getServer().getPlayer(args[0])
-                    }
-                }
+            if (sender.hasPermission("godcraft.burn")) {
+                if (args.size > 1) return false
+                val targetPlayer = if (args.isEmpty()) sender else Bukkit.getPlayer(args[0])
 
                 if (targetPlayer == null) {
                     sender.sendMessage("${CC.RED}That player could not be found!")
@@ -32,28 +24,22 @@ class Burn(val plugin: God) : CommandExecutor {
                 sender.sendMessage("${CC.YELLOW}Burn!")
                 plugin.logDebug("${sender.name} burned ${targetPlayer.name}")
                 return true
-            } else {
-                sender.sendMessage("${CC.RED}You do not have permissions to do that!")
-                return true
             }
-        } else {
-            val targetPlayer: Player?
-            if (args.isEmpty() || args.size > 1) {
-                return false
-            } else {
-                targetPlayer = Bukkit.getPlayer(args[0])
-            }
-
-            if (targetPlayer == null) {
-                sender.sendMessage("${CC.RED}That player is not online!")
-                return true
-            }
-
-            targetPlayer.fireTicks = 20000
-            sender.sendMessage("${CC.YELLOW}Burn!")
-            plugin.logDebug("Console burned ${targetPlayer.name}")
+            sender.sendMessage("${CC.RED}You do not have permissions to do that!")
             return true
         }
+        if (args.size != 1) return false
+        val targetPlayer = Bukkit.getPlayer(args[0])
+
+        if (targetPlayer == null) {
+            sender.sendMessage("${CC.RED}That player is not online!")
+            return true
+        }
+
+        targetPlayer.fireTicks = 20000
+        sender.sendMessage("${CC.YELLOW}Burn!")
+        plugin.logDebug("Console burned ${targetPlayer.name}")
+        return true
     }
 
 }

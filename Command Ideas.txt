@@ -21,6 +21,7 @@ Ride ----
 Setcompastarget ----
 Playnoise ----
 Setcanpickupitems ----
+Tacticalnuke ----
 
 for the console:
 Listinventory (what the player is wearing, what they are holding, what is in there invenoty...) ----
