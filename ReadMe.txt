@@ -13,12 +13,21 @@ If you need any help or wish to see more, Please email to fawfulcopter@gmail.com
 -- Change Log --
 ----------------
 ----
+2.0.1
+----
++ Added GoddessCraft command.
++ Added Reload argument to GoddessCraft command.
++ Added Debug argument to GoddessCraft command.
+* Fixed debug output for Troll command.
+* Refactored everything from "God" to "Goddess".
+* Added ReplaceTokens filter to build.gradle.
+----
 2.0.0
 ----
-+ Added verbose debug logging
-^ Upgraded to Spigot 1.11.2
-* Fixed a few issues with bad logic checks and misspelled permissions
-* Refactored codebase to Kotlin and Gradle
++ Added verbose debug logging.
+^ Upgraded to Spigot 1.11.2.
+* Fixed a few issues with bad logic checks and misspelled permissions.
+* Refactored codebase to Kotlin and Gradle.
 * DiamondIceNS has taken over! >:D
 ----
 1.9
