@@ -21,6 +21,7 @@ class Feed(val plugin: Goddess) : CommandExecutor {
                 }
 
                 targetPlayer.foodLevel = 20
+                targetPlayer.saturation = 20f
                 sender.sendMessage("${CC.YELLOW}Yum!")
                 plugin.logDebug("${sender.name} fed ${targetPlayer.name}")
                 return true
@@ -37,6 +38,7 @@ class Feed(val plugin: Goddess) : CommandExecutor {
         }
 
         targetPlayer.foodLevel = 20
+        targetPlayer.saturation = 20f
         sender.sendMessage("${CC.YELLOW}Yum!")
         plugin.logDebug("Console fed ${targetPlayer.name}")
         return true

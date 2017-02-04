@@ -6,10 +6,7 @@ import org.bukkit.ChatColor as CC
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import org.bukkit.entity.Arrow
-import org.bukkit.entity.Egg
-import org.bukkit.entity.Player
-import org.bukkit.entity.Snowball
+import org.bukkit.entity.*
 
 class Throw(val plugin: Goddess) : CommandExecutor {
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
@@ -34,9 +31,19 @@ class Throw(val plugin: Goddess) : CommandExecutor {
                 }
 
                 when (item) {
-                    "egg" -> targetPlayer.launchProjectile(Egg::class.java)
-                    "snowball" -> targetPlayer.launchProjectile(Snowball::class.java)
                     "arrow" -> targetPlayer.launchProjectile(Arrow::class.java)
+                    "dragonfireball", "dragon" -> targetPlayer.launchProjectile(DragonFireball::class.java)
+                    "egg" -> targetPlayer.launchProjectile(Egg::class.java)
+                    "enderpearl", "pearl" -> targetPlayer.launchProjectile(EnderPearl::class.java)
+                    "fishhook" -> targetPlayer.launchProjectile(FishHook::class.java)
+                    "largefireball" -> targetPlayer.launchProjectile(LargeFireball::class.java)
+                    "llamaspit", "spit" -> targetPlayer.launchProjectile(LlamaSpit::class.java)
+                    "shulkerbullet" -> targetPlayer.launchProjectile(ShulkerBullet::class.java)
+                    "smallfireball", "blaze", "blazefireball" -> targetPlayer.launchProjectile(SmallFireball::class.java)
+                    "snowball" -> targetPlayer.launchProjectile(Snowball::class.java)
+                    "spectralarrow", "spectral" -> targetPlayer.launchProjectile(SpectralArrow::class.java)
+                    "thrownexpbottle", "expbottle", "exp", "bottleo'enchanting" -> targetPlayer.launchProjectile(ThrownExpBottle::class.java)
+                    "witherskull", "skull", "wither" -> targetPlayer.launchProjectile(WitherSkull::class.java)
                     else -> return false
                 }
                 plugin.logDebug("${sender.name} made ${targetPlayer.name} shoot a projectile (type: $item)")
@@ -54,9 +61,19 @@ class Throw(val plugin: Goddess) : CommandExecutor {
 
         val item = args[1].toLowerCase()
         when (item) {
-            "egg" -> targetPlayer.launchProjectile(Egg::class.java)
-            "snowball" -> targetPlayer.launchProjectile(Snowball::class.java)
             "arrow" -> targetPlayer.launchProjectile(Arrow::class.java)
+            "dragonfireball", "dragon" -> targetPlayer.launchProjectile(DragonFireball::class.java)
+            "egg" -> targetPlayer.launchProjectile(Egg::class.java)
+            "enderpearl", "pearl" -> targetPlayer.launchProjectile(EnderPearl::class.java)
+            "fishhook" -> targetPlayer.launchProjectile(FishHook::class.java) //TODO
+            "largefireball", "ghast", "fireball", "ghastfireball" -> targetPlayer.launchProjectile(LargeFireball::class.java)
+            "llamaspit", "spit" -> targetPlayer.launchProjectile(LlamaSpit::class.java) //TODO
+            "shulkerbullet" -> targetPlayer.launchProjectile(ShulkerBullet::class.java) //TODO
+            "smallfireball", "blaze", "blazefireball" -> targetPlayer.launchProjectile(SmallFireball::class.java)
+            "snowball" -> targetPlayer.launchProjectile(Snowball::class.java)
+            "spectralarrow", "spectral" -> targetPlayer.launchProjectile(SpectralArrow::class.java)
+            "thrownexpbottle", "expbottle", "exp", "bottleo'enchanting" -> targetPlayer.launchProjectile(ThrownExpBottle::class.java)
+            "witherskull", "skull", "wither" -> targetPlayer.launchProjectile(WitherSkull::class.java)
             else -> return false
         }
         plugin.logDebug("${sender.name} made ${targetPlayer.name} shoot a projectile (type: $item)")

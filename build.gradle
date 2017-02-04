@@ -19,7 +19,7 @@ plugins {
 apply plugin: 'kotlin'
 
 group = 'co.orre'
-version = '2.0.1'
+version = '2.0.2'
 description = """Useful and fun tools to let you rule your server like a god!"""
 ext.url = 'https://dev.bukkit.org/projects/goddess-craft'
 
